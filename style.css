@@ -30,7 +30,7 @@ body {
   box-shadow: rgba(10, 22, 41, 0.6) 0px 10px 22px;
 }
 
-.header > img {
+.header>img {
   width: 72px;
   height: 73px;
   margin-top: -6px;
@@ -53,13 +53,13 @@ body {
   background-position: center;
 }
 
-.call > li > a {
+.call>li>a {
   color: white;
   text-decoration: none;
   list-style: none;
 }
 
-.call > li {
+.call>li {
   list-style: none;
 }
 
@@ -68,11 +68,11 @@ body {
   list-style: none;
 }
 
-.social > li > a {
+.social>li>a {
   color: white;
 }
 
-.p1 > h5 {
+.p1>h5 {
   align-content: left;
   font-size: 4px;
 }
@@ -121,7 +121,7 @@ cpad {
   flex-direction: column;
 }
 
-.call-bt > a {
+.call-bt>a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -143,9 +143,7 @@ cpad {
   align-items: center;
   box-shadow: rgba(10, 22, 41, 0.7) 0px 7px 15px;
   background-color: rgba(7, 27, 59, 1);
-  transition: all 400ms
-    linear(
-      0,
+  transition: all 400ms linear(0,
       0.004,
       0.016,
       0.035,
@@ -182,8 +180,7 @@ cpad {
       0.988,
       0.984,
       0.988,
-      1
-    );
+      1);
 }
 
 .call-bt:active {
@@ -214,7 +211,7 @@ cpad {
   gap: 10px;
 }
 
-.map > iframe {
+.map>iframe {
   filter: invert(90%) hue-rotate(180deg);
   border-radius: 30px;
   position: static;
@@ -237,4 +234,22 @@ cpad {
   font-family: "Noto Sans", sans-serif;
   color: white;
   margin-top: -1em;
+}
+
+/* Initial blurred state */
+.blur-text {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(10px);
+  transition:
+    opacity 0.8s ease,
+    filter 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* After load */
+.blur-text.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }

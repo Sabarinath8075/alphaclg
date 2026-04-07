@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang"en">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Alpha College Kollam
-  </title>
+  <title>Alpha College Kollam</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./Picsart_25-09-23_11-50-46-149.ico">
+  <!-- Added Tabler Icons for the specific telephone styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 
 <body>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".blur-text").forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add("show");
+        }, i * 150); // stagger effect
+      });
+    });
+  </script>
   <header class="header">
     <img src="./alpha.png" alt="alpha not found">
     <nav class="navbar">
@@ -23,82 +31,86 @@
   </header>
   <div class="home">
     <div class="al">
-      <h1 align="center">
+      <h1 class="blur-text " align="center">
         Alpha
         <br>
         College
       </h1>
     </div>
-    <div class="dock">
+    <div class="dock blur-text">
       <div class="call-bt">
         <a href="tel:9847713977">
-          <ion-icon name="call-outline"></ion-icon>
+          <!-- The "C-shaped" handset icon -->
+          <i class="ti ti-phone"></i>
         </a>
       </div>
       <div class="call-bt">
         <a href="tel:9061115757">
-          <ion-icon name="call-outline"></ion-icon>
-
+          <!-- The "full telephone" (landline) icon -->
+          <i class="ti ti-device-landline-phone"></i>
         </a>
       </div>
 
-
       <div class="call-bt">
         <a href="https://www.facebook.com/profile.php?id=61581613560293">
-          <ion-icon name="logo-facebook"></ion-icon>
+          <i class="ti ti-brand-facebook"></i>
         </a>
       </div>
       <div class="call-bt">
         <a href="https://www.instagram.com/gopu_alpha/">
-          <ion-icon name="logo-instagram"></ion-icon>
+          <i class="ti ti-brand-instagram"></i>
         </a>
       </div>
     </div>
   </div>
   <div class="p1">
-    <h3 id="about"> About: </h3>
+    <h3 class="blur-text " id="about"> About: </h3>
 
-    <p align="left">
+    <p class="blur-text " align="left">
       Alpha College is a trusted educational institution offering specialized courses and tuition for students
       pursuing SSLC (Class 10) and +2 (Class 12) through NIOS (National Institute of Open Schooling).
     </p>
-    <h3>6-Month SSLC/+2 courses:</h3>
-    <p> Alpha College offers a 6-month intensive program for both SSLC and +2 students. This unique fast-track course
+    <h3 class="blur-text ">6-Month SSLC/+2 courses:</h3>
+    <p class="blur-text "> Alpha College offers a 6-month intensive program for both SSLC and +2 students. This unique
+      fast-track course
       is designed especially for those who are seeking to finish their secondary or higher secondary education
       efficiently. It is ideal for students who could not complete regular schooling due to various reasons.</p>
-    <p> Our courses are recognized and valid for government and competitive exams such as PSC, UPSC. Students can
+    <p class="blur-text "> Our courses are recognized and valid for government and competitive exams such as PSC, UPSC.
+      Students can
       complete their education and appear for these exams without delay.</p>
-    <h3>What We Offer:</h3>
+    <h3 class="blur-text ">What We Offer:</h3>
     <ul class="list">
-      <li>
+      <li class="blur-text ">
         NIOS X and XII Courses (6-Month Fast Track).</li>
       <br>
-      <li>Specialized coaching in Humanities, Commerce, and Science.</li>
+      <li class="blur-text ">Specialized coaching in Humanities, Commerce, and Science.</li>
       <br>
-      <li>Special tuition for key subjects like Mathematics, Science, and Commerce.</li>
+      <li class="blur-text ">Special tuition for key subjects like Mathematics, Science, and Commerce.</li>
       <br>
-      <li>Complete academic support with study materials, project guidance, and personal mentoring.
+      <li class="blur-text ">Complete academic support with study materials, project guidance, and personal mentoring.
       </li><br>
-      <li>We help students not just pass exams, but also build confidence for their academic and career growth.
+      <li class="blur-text ">We help students not just pass exams, but also build confidence for their academic and
+        career growth.
       </li>
     </ul>
-    <h3>Why Choose Alpha College?</h3>
+    <h3 class="blur-text ">Why Choose Alpha College?</h3>
     <ul class="list">
-      <li>Recognized alternative education programs.</li><br>
-      <li>No pressure of public exams for +2 eligibility.</li><br>
-      <li>Supportive faculty and flexible class timings.</li><br>
-      <li>Personalized attention and exam-oriented preparation.</li><br>
-      <li>Complete assistance with NIOS registration and project work.</li>
+      <li class="blur-text ">Recognized alternative education programs.</li><br>
+      <li class="blur-text ">No pressure of public exams for +2 eligibility.</li><br>
+      <li class="blur-text ">Supportive faculty and flexible class timings.</li><br>
+      <li class="blur-text ">Personalized attention and exam-oriented preparation.</li><br>
+      <li class="blur-text ">Complete assistance with NIOS registration and project work.</li>
       <br><br>
     </ul>
   </div>
-  <div id=" location" class="map">
+  <div id="location" class="map blur-text ">
     <h3 id="location" class="loc" text-align="left"> Location: </h3>
     <div class="map-container"> <iframe loading="lazy"
         style="width: 90vw; height: 20em; border-radius: 30px; filter: invert(90%) hue-rotate(180deg)"
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Alpha%20college%20kollam%2C%20Vikas%20Nagar%2C%20Viskas%20Nagar%2C%20Chammamukku%2C%20Kollam%2C%20Kerala%2C%20India&maptype=roadmap"
         allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
   </div>
+  <br>
 </body>
 
 </html>
