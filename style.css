@@ -5,21 +5,20 @@
   box-sizing: border-box;
 }
 
-body {
-  background-position-y: 4em;
-  background-size: contain, cover;
-  background-color: rgba(20, 40, 72, 1);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   width: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: rgba(20, 40, 72, 1);
+  background-position-y: 4em;
+  background-repeat: no-repeat;
 }
 
 .header {
@@ -73,9 +72,10 @@ html {
 }
 
 .header-left img {
-  width: 80px;
+  width: auto;
   height: 80px;
   object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
 
 .menu-button {
@@ -95,7 +95,7 @@ html {
 .navbar {
   position: fixed;
   top: 70px;
-  right: -100%;
+  right: 0;
   width: 50%;
   height: auto;
   max-height: 80vh;
@@ -108,13 +108,14 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 
 .navbar.active {
-  right: 0;
+  transform: translateX(0);
 }
 
 .navbar a {
@@ -187,11 +188,6 @@ html {
   margin-left: -1em;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 10%;
-}
-
 .top {
   font-size: 2em;
   margin-left: 2em;
@@ -218,6 +214,7 @@ cpad {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 70px;
 }
 
 .call-bt>a {
@@ -551,7 +548,7 @@ a {
   }
 
   .header-left img {
-    width: 100px;
+    width: auto;
     height: 100px;
     margin-top: 0;
   }
